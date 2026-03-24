@@ -231,6 +231,7 @@ abbr  { text-decoration: none; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
   padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 5vw, 5rem);
 }
 
