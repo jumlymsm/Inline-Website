@@ -195,19 +195,22 @@ abbr  { text-decoration: none; }
   padding-top: 74px; /* clear the fixed nav */
 }
 
-/* Media capped at 80% of viewport height */
+/* Full image, no crop, capped height — dark bg hides letterbox gaps */
 .hero__media {
   position: relative;
-  line-height: 0;
-  max-height: 80vh;
+  height: 85vh;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .hero__img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
 }
 
