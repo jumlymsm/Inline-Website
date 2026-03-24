@@ -5,134 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inline Bathrooms — Premium Bathroom Renovations</title>
   <meta name="description" content="Inline Bathrooms delivers premium, fully managed bathroom renovations. Design-led, precision-crafted, handled from first concept to final finish." />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===================== NAVIGATION ===================== -->
+  <!-- ══════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════ -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__logo-link">
-        <img src="inline-bathrooms.png" alt="Inline Bathrooms" class="nav__logo" />
-      </a>
+      <a href="#top" class="nav__wordmark">Inline Bathrooms</a>
       <a href="#contact" class="btn btn--sage">Book a Consultation</a>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- ══════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════ -->
   <section class="hero" id="top">
-    <img
-      src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png"
-      alt="Inline Bathrooms — premium renovation"
-      class="hero__img"
-    />
+    <div class="hero__media">
+      <img
+        src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png"
+        alt="Inline Bathrooms — luxury renovation"
+        class="hero__img"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Premium Bathroom Renovations</p>
+      <h1 class="hero__headline">Designed Beautifully.<br/><em>Built Properly.</em></h1>
+      <p class="hero__sub">One team. One timeline. Complete control.</p>
+      <a href="#contact" class="btn btn--gold hero__cta">Begin Your Renovation</a>
+    </div>
+    <div class="hero__scroll-line"></div>
   </section>
 
-  <!-- ===================== STATEMENT ===================== -->
-  <section class="statement">
-    <div class="statement__inner">
-      <h1 class="statement__headline reveal">Designed Beautifully.<br/>Built Properly.</h1>
-      <p class="statement__sub reveal">One team. One timeline. <strong>Complete control.</strong></p>
+  <!-- ══════════════════════════════════════════════════
+       WHY INLINE — 3 columns
+  ══════════════════════════════════════════════════ -->
+  <section class="why" id="why">
+    <div class="why__inner">
+      <div class="why__header">
+        <p class="label">Why Inline</p>
+        <h2 class="why__headline">The standard others aspire to.</h2>
+      </div>
+      <div class="why__grid">
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="30" height="30" stroke="#b49a5c" stroke-width="1"/>
+              <path d="M8 16 L14 22 L24 10" stroke="#b49a5c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Premium Design</h3>
+          <p class="why-card__body">Every Inline renovation begins with a bespoke design consultation. We develop a concept that reflects your taste, lifestyle, and the architecture of your home — then refine it until it's exactly right.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="30" height="30" stroke="#b49a5c" stroke-width="1"/>
+              <line x1="8" y1="11" x2="24" y2="11" stroke="#b49a5c" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="16" x2="24" y2="16" stroke="#b49a5c" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="21" x2="17" y2="21" stroke="#b49a5c" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Full Project Management</h3>
+          <p class="why-card__body">One point of contact from brief to handover. We manage every tradesperson, every timeline, every material order — so you experience nothing but progress. No chasing. No confusion. No compromise.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-card__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="30" height="30" stroke="#b49a5c" stroke-width="1"/>
+              <circle cx="16" cy="14" r="5" stroke="#b49a5c" stroke-width="1.5"/>
+              <path d="M8 27 C8 22.5 24 22.5 24 27" stroke="#b49a5c" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">In-House Delivery</h3>
+          <p class="why-card__body">Our hand-selected specialists are experts in high-end bathroom installation. Waterproofing, tiling, plumbing, joinery, and lighting — all executed in-house to exacting standards, with a finish that speaks for itself.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== SPLIT 1 — text | image ===================== -->
-  <section class="split" id="services">
-    <div class="split__text reveal">
-      <h2 class="split__heading">Premium renovations,<br/>fully managed.</h2>
-      <p class="split__body">We handle every detail of your bathroom renovation — from the first design consultation to the final tile. One point of contact, zero surprises, and a result that exceeds every expectation. Inline Bathrooms takes complete ownership of your project, so you never have to.</p>
+  <!-- ══════════════════════════════════════════════════
+       FEATURE ROWS — alternating image / text
+  ══════════════════════════════════════════════════ -->
+  <section class="features" id="features">
+
+    <!-- Row 1: image left / text right -->
+    <div class="feature feature--img-left">
+      <div class="feature__media">
+        <img
+          src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png"
+          alt="Curated materials and finishes"
+          class="feature__img feature__img--a"
+        />
+      </div>
+      <div class="feature__text reveal">
+        <p class="label label--gold">Materials &amp; Finishes</p>
+        <h2 class="feature__heading">Sourced for beauty.<br/>Selected to last.</h2>
+        <p class="feature__body">We work with a curated network of premium suppliers across stone, tile, joinery, plumbing fixtures, and lighting. Every specification is chosen for its finish quality, its longevity, and how it contributes to the whole. No off-the-shelf compromises.</p>
+        <a href="#contact" class="feature__link">Start your project <span>→</span></a>
+      </div>
     </div>
-    <div class="split__media">
-      <img src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png" alt="Premium bathroom renovation" class="split__img split__img--right" />
+
+    <!-- Row 2: text left / image right -->
+    <div class="feature feature--img-right">
+      <div class="feature__text reveal">
+        <p class="label label--gold">The Process</p>
+        <h2 class="feature__heading">Precise. Transparent.<br/>On your terms.</h2>
+        <p class="feature__body">Before a single tradesperson is booked, you approve every detail. Our project managers are on site daily, you receive regular progress updates, and your timeline is a commitment — not an estimate. We deliver what we promise, when we promise it.</p>
+        <a href="#contact" class="feature__link">Discuss your renovation <span>→</span></a>
+      </div>
+      <div class="feature__media">
+        <img
+          src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png"
+          alt="Inline Bathrooms project management"
+          class="feature__img feature__img--b"
+        />
+      </div>
     </div>
+
   </section>
 
-  <!-- ===================== SPLIT 2 — image | text ===================== -->
-  <section class="split split--reverse">
-    <div class="split__media">
-      <img src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png" alt="Curated bathroom materials" class="split__img split__img--left" />
-    </div>
-    <div class="split__text reveal">
-      <h2 class="split__heading">Material selections<br/>that last a lifetime.</h2>
-      <p class="split__body">Every fixture, surface, and fitting is sourced from our curated network of premium suppliers. Natural stone, brushed metals, bespoke timber cabinetry — each material chosen for its beauty, its integrity, and its longevity. Nothing leaves our specification without meeting our exacting standards.</p>
-    </div>
-  </section>
-
-  <!-- ===================== DARK FEATURE ===================== -->
-  <section class="dark-feature" id="philosophy">
-    <div class="dark-feature__inner reveal">
-      <h2 class="dark-feature__headline">A renovation should<br/>feel effortless.</h2>
-      <p class="dark-feature__body">Our fully managed service means you never have to coordinate tradespeople, chase updates, or manage a timeline. We take complete ownership of your project — from brief to beautiful finish — and keep you informed every step of the way.</p>
-    </div>
-  </section>
-
-  <!-- ===================== SPLIT 3 — image | text ===================== -->
-  <section class="split split--reverse split--cream" id="process">
-    <div class="split__media">
-      <img src="hf_20260227_010903_4f5d5c76-c105-4495-a29a-84929def2adb.png" alt="Inline Bathrooms project management" class="split__img split__img--top" />
-    </div>
-    <div class="split__text reveal">
-      <h2 class="split__heading">Your project, on time<br/>and on brief.</h2>
-      <p class="split__body">Inline's project management is precise, transparent, and built around your schedule. We deliver detailed timelines before a single tradesperson is booked, keep you informed at every stage, and deliver on every promise — without exception.</p>
-    </div>
-  </section>
-
-  <!-- ===================== CONTACT / FORM ===================== -->
+  <!-- ══════════════════════════════════════════════════
+       CONTACT / ENQUIRY FORM
+  ══════════════════════════════════════════════════ -->
   <section class="contact" id="contact">
     <div class="contact__inner">
       <div class="contact__header reveal">
+        <p class="label label--muted">Get in Touch</p>
         <h2 class="contact__headline">Book your personalised<br/>consultation.</h2>
-        <p class="contact__sub">Tell us about your space and vision. We'll be in touch within one business day.</p>
+        <p class="contact__sub">Tell us about your project. We'll respond within one business day.</p>
       </div>
+
       <form class="contact__form reveal" id="contactForm" novalidate>
         <div class="form__grid">
           <div class="form__field">
-            <label for="fname" class="form__label">First name <span>*</span></label>
-            <input type="text" id="fname" name="fname" class="form__input" required />
+            <label for="fname" class="form__label">First Name <abbr title="required">*</abbr></label>
+            <input type="text" id="fname" name="fname" class="form__input" autocomplete="given-name" required />
           </div>
           <div class="form__field">
-            <label for="lname" class="form__label">Last name <span>*</span></label>
-            <input type="text" id="lname" name="lname" class="form__input" required />
+            <label for="lname" class="form__label">Last Name <abbr title="required">*</abbr></label>
+            <input type="text" id="lname" name="lname" class="form__input" autocomplete="family-name" required />
           </div>
           <div class="form__field">
-            <label for="email" class="form__label">Email address <span>*</span></label>
-            <input type="email" id="email" name="email" class="form__input" required />
+            <label for="phone" class="form__label">Phone Number <abbr title="required">*</abbr></label>
+            <input type="tel" id="phone" name="phone" class="form__input" autocomplete="tel" required />
           </div>
           <div class="form__field">
-            <label for="phone" class="form__label">Phone number</label>
-            <input type="tel" id="phone" name="phone" class="form__input" />
+            <label for="email" class="form__label">Email Address <abbr title="required">*</abbr></label>
+            <input type="email" id="email" name="email" class="form__input" autocomplete="email" required />
           </div>
           <div class="form__field">
             <label for="suburb" class="form__label">Suburb</label>
-            <input type="text" id="suburb" name="suburb" class="form__input" />
+            <input type="text" id="suburb" name="suburb" class="form__input" autocomplete="address-level2" />
           </div>
           <div class="form__field">
-            <label for="service" class="form__label">Renovation type</label>
+            <label for="budget" class="form__label">Project Budget</label>
             <div class="form__select-wrap">
-              <select id="service" name="service" class="form__select">
+              <select id="budget" name="budget" class="form__select">
                 <option value="" disabled selected></option>
-                <option value="full">Full Renovation</option>
-                <option value="refresh">Renovation Refresh</option>
-                <option value="consultation">Design Consultation</option>
-                <option value="other">Other</option>
+                <option value="30-50k">$30,000 – $50,000</option>
+                <option value="50-80k">$50,000 – $80,000</option>
+                <option value="80-120k">$80,000 – $120,000</option>
+                <option value="120k+">$120,000+</option>
+                <option value="unsure">Unsure — happy to discuss</option>
               </select>
             </div>
           </div>
         </div>
         <div class="form__submit">
-          <button type="submit" class="btn btn--gold btn--wide">Book your personalised consultation</button>
+          <button type="submit" class="btn btn--gold btn--lg" id="submitBtn">
+            Book Your Personalised Consultation
+          </button>
         </div>
+        <p class="form__privacy">Your details are kept private and never shared with third parties.</p>
       </form>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer__inner">
-      <img src="inline-bathrooms.png" alt="Inline Bathrooms" class="footer__logo" />
+      <p class="footer__wordmark">Inline Bathrooms</p>
+      <p class="footer__tagline">Premium renovations, fully managed.</p>
       <p class="footer__copy">&copy; 2026 Inline Bathrooms. All rights reserved.</p>
     </div>
   </footer>

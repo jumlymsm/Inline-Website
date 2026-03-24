@@ -6,68 +6,83 @@
   'use strict';
 
   /* ── Scroll-triggered reveal ──────────────────────────────── */
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-
-  /* ── Hide/show nav on scroll ──────────────────────────────── */
+  /* ── Nav: hide on scroll down, reveal on scroll up ─────────  */
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
-
+  let prev = 0;
   window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    if (current > 200) {
-      nav.style.transform = current > lastScroll ? 'translateY(-100%)' : 'translateY(0)';
+    const curr = window.scrollY;
+    if (curr > 120) {
+      nav.style.transform = curr > prev ? 'translateY(-100%)' : 'translateY(0)';
     } else {
       nav.style.transform = 'translateY(0)';
     }
-    lastScroll = current;
+    prev = curr;
   }, { passive: true });
 
   /* ── Smooth scroll for anchor links ──────────────────────── */
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(a.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = nav ? nav.offsetHeight : 72;
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+      const offset = (nav?.offsetHeight ?? 74);
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - offset,
+        behavior: 'smooth'
+      });
     });
   });
 
-  /* ── Contact form feedback ────────────────────────────────── */
+  /* ── Contact form ─────────────────────────────────────────── */
   const form = document.getElementById('contactForm');
-  if (form) {
+  const submitBtn = document.getElementById('submitBtn');
+
+  if (form && submitBtn) {
+    const originalLabel = submitBtn.textContent;
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn.textContent;
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
+
+      // Basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach((field) => {
+        field.style.borderBottom = '';
+        if (!field.value.trim()) {
+          field.style.borderBottom = '1px solid #c0392b';
+          valid = false;
+        }
+      });
+      if (!valid) return;
+
+      // Simulate submission
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
 
       setTimeout(() => {
-        btn.textContent = 'Enquiry sent — we\'ll be in touch shortly';
-        btn.style.background = 'var(--sage)';
-        btn.style.borderColor = 'var(--sage)';
+        submitBtn.textContent = 'Consultation request received — we\'ll be in touch shortly.';
+        submitBtn.style.background = 'var(--sage)';
+        submitBtn.style.borderColor = 'var(--sage)';
 
         setTimeout(() => {
-          btn.textContent = original;
-          btn.disabled = false;
-          btn.style.background = '';
-          btn.style.borderColor = '';
+          submitBtn.textContent = originalLabel;
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+          submitBtn.style.borderColor = '';
           form.reset();
-        }, 4000);
-      }, 1000);
+        }, 5000);
+      }, 1200);
     });
   }
 
