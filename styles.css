@@ -2,6 +2,52 @@
    INLINE BATHROOMS — Premium Stylesheet
    ============================================================ */
 
+/* ── Tiempos Typefaces (Klim Type Foundry — commercial licence)
+      Place your licensed font files in a /fonts folder.
+      Expected filenames are listed below — rename to match if
+      yours differ. woff2 is preferred; woff is the fallback.
+   ─────────────────────────────────────────────────────────── */
+
+/* Tiempos Text Bold — headings */
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('fonts/TiemposText-Bold.woff2') format('woff2'),
+       url('fonts/TiemposText-Bold.woff')  format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tiempos Text Bold Italic — italic headings */
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('fonts/TiemposText-BoldItalic.woff2') format('woff2'),
+       url('fonts/TiemposText-BoldItalic.woff')  format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Tiempos Headline Light — subheadings */
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url('fonts/TiemposHeadline-Light.woff2') format('woff2'),
+       url('fonts/TiemposHeadline-Light.woff')  format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tiempos Headline Light Italic */
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url('fonts/TiemposHeadline-LightItalic.woff2') format('woff2'),
+       url('fonts/TiemposHeadline-LightItalic.woff')  format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ── Custom Properties ─────────────────────────────────────── */
 :root {
   --bg:       #f9f6f1;
@@ -10,9 +56,9 @@
   --gold:     #b49a5c;
   --sage:     #798a7b;
 
-  /* Type stacks */
-  --f-heading: 'Playfair Display', 'Georgia', serif;
-  --f-sub:     'Cormorant Garamond', 'Georgia', serif;
+  /* Type stacks — Tiempos with serif fallbacks */
+  --f-heading: 'Tiempos Text',     'Georgia', serif;
+  --f-sub:     'Tiempos Headline', 'Georgia', serif;
   --f-body:    'Inter', system-ui, sans-serif;
 
   /* Motion */
@@ -198,7 +244,7 @@ abbr  { text-decoration: none; }
 .hero__headline {
   font-family: var(--f-heading);
   font-size: clamp(2.8rem, 6.5vw, 6rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.07;
   color: #fff;
   margin-bottom: 1.25rem;
