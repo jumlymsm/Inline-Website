@@ -176,15 +176,14 @@ abbr  { text-decoration: none; }
   justify-content: space-between;
 }
 
-/* Wordmark — Playfair Display, wide-tracked caps */
-.nav__wordmark {
-  font-family: var(--f-heading);
-  font-weight: 700;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--charcoal);
-  line-height: 1;
+.nav__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  height: 38px;
+  width: auto;
 }
 
 /* ============================================================
@@ -590,13 +589,12 @@ abbr  { text-decoration: none; }
   text-align: center;
 }
 
-.footer__wordmark {
-  font-family: var(--f-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: rgba(249, 246, 241, 0.9);
+.footer__logo {
+  height: 38px;
+  width: auto;
+  /* Logo is dark on transparent — invert to show on charcoal footer */
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
 }
 
 .footer__tagline {
