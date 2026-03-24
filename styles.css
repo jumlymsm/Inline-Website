@@ -210,6 +210,8 @@ abbr  { text-decoration: none; }
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
+  transform: scaleX(1.18);
+  transform-origin: center center;
 }
 
 /* Gradient overlay: subtle at top, stronger at bottom-left */
